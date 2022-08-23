@@ -12,7 +12,10 @@ import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { ChangeAlert } from '../ChangeAlert';
-
+/**
+ * 
+ * @returns {JSX.Element} Render de la pagina principal
+ */
 function App() {
   const {
     error,
@@ -31,7 +34,7 @@ function App() {
   } = useTodos();
   
   return (
-    <React.Fragment>
+    <>
       <TodoHeader loading={loading}>
         <TodoCounter
           totalTodos={totalTodos}
@@ -83,7 +86,7 @@ function App() {
       <ChangeAlert
         sincronize={sincronizeTodos}
       />
-    </React.Fragment>
+    </>
   );
 }
 
